@@ -11,9 +11,11 @@
     
     <div id="container">
 
-       <ul>
+        <h1>10 Random Emails</h1>
 
-        <li v-for="email in arrEmails">
+       <ul v-if="arrEmails.length === 10">
+
+        <li v-for="email, i in arrEmails" :key="i">
             The email: {{ email }}
         </li>
 
